@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Meridian Financial Group — Securiti cookie banner theme, embedded site-side.
+   Loaded on every page so the Securiti banner/preference-center is branded
+   without needing console access. Selectors are prefixed with `html body`
+   (high specificity) + !important so they beat the SDK's inline styles and
+   the console's compiled theme.
+   Brand: money #0B7A4B / dark #064E3B / deep #03291E, gold #C9A227,
+   Playfair Display titles, Inter body, rounded-md buttons.
+   ========================================================================== */
+
+/* ---- Banner bar --------------------------------------------------------- */
+html body .cc-window{ background-color:#ffffff !important; color:#03291E !important; border-top:4px solid #C9A227 !important; border-radius:12px !important; box-shadow:0 24px 60px -22px rgba(3,41,30,.45) !important; font-family:'Inter',ui-sans-serif,system-ui,sans-serif !important; }
+html body .cc-window .cc-message{ color:#334155 !important; }
+html body .cc-window .cc-link,
+html body .cc-window .cc-message-container a,
+html body .cc-window.cc-banner p a{ color:#0B7A4B !important; text-decoration:underline !important; }
+html body .cc-window .cc-btn{ border-radius:.375rem !important; font-weight:600 !important; }
+html body .cc-window .cc-btn.cc-allow{ background-color:#0B7A4B !important; color:#ffffff !important; border:1.5px solid #0B7A4B !important; }
+html body .cc-window .cc-btn.cc-allow:hover{ background-color:#064E3B !important; border-color:#064E3B !important; }
+html body .cc-window .cc-btn.cc-deny,
+html body .cc-window .cc-btn.cc-dismiss{ background-color:#ffffff !important; color:#0B7A4B !important; border:1.5px solid #0B7A4B !important; }
+html body .cc-window .cc-btn.cc-deny:hover,
+html body .cc-window .cc-btn.cc-dismiss:hover{ background-color:#0B7A4B !important; color:#ffffff !important; }
+html body .cc-window .cc-close.cc-close-banner-btn{ color:#064E3B !important; }
+
+/* ---- Preference-center modal -------------------------------------------- */
+html body .cmp-modal{ background-color:#ffffff !important; color:#03291E !important; font-family:'Inter',ui-sans-serif,system-ui,sans-serif !important; }
+/* Default EVERY text element in the modal to readable dark. The console theme
+   colours text white for its dark background, which vanishes on our white modal
+   (category labels, switch labels, etc.). This is low-specificity, so the brand
+   accents, links, footer logo and buttons below keep their colours. */
+html body .cmp-modal *{ color:#03291E !important; }
+html body .cmp-modal .cmp-modal__title{ color:#064E3B !important; font-family:'Playfair Display',Georgia,serif !important; font-weight:700 !important; }
+/* The Securiti console has the wrong (NovaMart) logo configured for this domain — swap to Meridian's. */
+html body .cmp-modal .cmp-modal__logo img{ content:url("/assets/logo-meridian.png") !important; max-height:56px !important; width:auto !important; object-fit:contain !important; }
+html body .cmp-modal .cmp-modal__sub-title a{ color:#0B7A4B !important; text-decoration:underline !important; }
+html body .cmp-modal .cmp-modal__close,
+html body .cmp-modal .cmp-modal__close svg{ color:#064E3B !important; fill:#064E3B !important; }
+
+/* header + tabs */
+html body .cmp-modal .cmp-tabs__nav ul li{ color:#64748b !important; }
+html body .cmp-modal .cmp-tabs__nav ul li.is-active{ color:#064E3B !important; border-color:#C9A227 !important; }
+html body .cmp-modal .cmp-tabs__title,
+html body .cmp-modal .cmp-tabs__title.cmp-fixed-wd-title{ color:#064E3B !important; }
+html body .cmp-modal .cmp-horizontal-tabs__nav ul li.is-active a,
+html body .cmp-modal .cmp-horizontal-tabs__nav ul li.is-active span{ color:#064E3B !important; border-color:#C9A227 !important; }
+html body .cmp-modal li.is-active .cmp-check-icon,
+html body .cmp-modal .cmp-check-icon{ color:#0B7A4B !important; fill:#0B7A4B !important; }
+/* selected category pill — the console tints it salmon (red brand); make it Meridian mint-green */
+html body .cmp-modal .cmp-category.is-active{ background-color:#D1FAE5 !important; color:#064E3B !important; }
+html body .cmp-modal .cmp-mobile-dropdown.cmp-category-consented{ background-color:#D1FAE5 !important; color:#064E3B !important; }
+
+/* toggles */
+html body .cmp-modal .cmp-switch__slider{ background-color:#cbd5e1 !important; }
+html body .cmp-modal .cmp-switch.readonly input+.cmp-switch__slider{ background-color:#a7d3bf !important; }
+html body .cmp-modal .cmp-switch input:checked+.cmp-switch__slider{ background-color:#0B7A4B !important; }
+html body .cmp-modal .cmp-switch input:checked+.cmp-switch__slider svg{ fill:#ffffff !important; }
+
+/* cookie-list / accordion detail text — renders white (built for the old dark
+   console theme); force readable dark on the white modal so cookie names,
+   descriptions and tables are visible. */
+html body .cmp-modal .cmp-tabs__sub-title,
+html body .cmp-modal .cmp-accordion__title,
+html body .cmp-modal .cmp-accordion__sub-title,
+html body .cmp-modal .cmp-cookie-head,
+html body .cmp-modal .cmp-cookie-text,
+html body .cmp-modal .cmp-cookie-info,
+html body .cmp-modal .cmp-list-tile,
+html body .cmp-modal .cmp-details-view td,
+html body .cmp-modal .cmp-details-view th { color:#03291E !important; }
+html body .cmp-modal .cmp-accordion a,
+html body .cmp-modal .cmp-accordion__content a { color:#0B7A4B !important; text-decoration:underline !important; word-break:break-all; }
+
+/* footer + its wrappers — DARK green bar so the light "Powered by securiti" logo is readable */
+/* High-specificity (.cmp-theme .cmp-modal … footer) so the published SDK theme, which
+   now paints a light footer, can't override us and hide the light securiti logo. */
+html body .cmp-theme .cmp-modal .cmp-modal__footer,
+html body .cmp-theme .cmp-modal .cmp-modal__footer .cmp-btn-wrapper,
+html body .cmp-theme .cmp-modal .cmp-modal__footer .cmp-logo-wrapper,
+html body .cmp-modal__footer,
+html body .cmp-modal .cmp-btn-wrapper,
+html body .cmp-modal .cmp-logo-wrapper{ background-color:#03291E !important; }
+html body .cmp-theme .cmp-modal .cmp-modal__footer .cmp-logo-wrapper,
+html body .cmp-theme .cmp-modal .cmp-modal__footer .cmp-logo-wrapper *,
+html body .cmp-modal .cmp-logo-wrapper, html body .cmp-modal .cmp-logo-wrapper *{ color:#e5e7eb !important; fill:#e5e7eb !important; }
+html body .cmp-modal .cmp-save-btn{ background-color:#C9A227 !important; color:#ffffff !important; border:1.5px solid #C9A227 !important; border-radius:.375rem !important; font-weight:700 !important; }
+html body .cmp-modal .cmp-save-btn:hover{ background-color:#A5851C !important; }
+html body .cmp-modal .cmp-decline-btn{ background-color:transparent !important; color:#ffffff !important; border:1.5px solid rgba(255,255,255,.45) !important; border-radius:.375rem !important; font-weight:600 !important; }
+html body .cmp-modal .cmp-link-btn{ color:#0B7A4B !important; }
+
+/* Fit the preference-center modal to the viewport on ANY screen height so the header
+   and footer never clip. The SDK gives the modal a fixed pixel height and vertically
+   centers it, which clips the top + bottom on shorter viewports. Re-center robustly
+   with translate(-50%,-50%), cap the height to the viewport, make the modal a flex
+   column, pin the header + footer, and let ONLY the middle region scroll (one
+   scrollbar). Then keep content surfaces white so the console's dark theme can't show
+   through. */
+html body .cmp-modal{
+  left:50% !important; top:50% !important; transform:translate(-50%,-50%) !important;
+  max-height:calc(100vh - 24px) !important; height:auto !important;
+  display:flex !important; flex-direction:column !important; overflow:hidden !important;
+}
+html body .cmp-modal .cmp-modal__body{
+  display:flex !important; flex-direction:column !important;
+  min-height:0 !important; max-height:100% !important; overflow:hidden !important;
+}
+html body .cmp-modal .cmp-modal__header,
+html body .cmp-modal .cmp-modal__footer{ flex:0 0 auto !important; }
+html body .cmp-modal .cmp-horizontal-tabs{ flex:1 1 auto !important; min-height:0 !important; overflow-y:auto !important; }
+/* Inner panels must NOT scroll independently, or a short viewport shows two scrollbars.
+   Let them grow; the single scroll lives on .cmp-horizontal-tabs above. */
+html body .cmp-modal .cmp-horizontal-tabs__content,
+html body .cmp-modal .cmp-tabs,
+html body .cmp-modal .cmp-tabs__content,
+html body .cmp-modal .cmp-details-view{ overflow:visible !important; max-height:none !important; height:auto !important; }
+html body .cmp-modal .cmp-modal__body,
+html body .cmp-modal .cmp-details-view,
+html body .cmp-modal .cmp-details-header,
+html body .cmp-modal .cmp-tabs__content,
+html body .cmp-modal .cmp-cookie-info,
+html body .cmp-modal .cmp-accordion,
+html body .cmp-modal .cmp-accordion__content,
+html body .cmp-modal .cmp-list-tile{ background-color:#ffffff !important; }
+
+/* ---- DURABLE FIX: no console-dark surface anywhere in the modal body -------
+   The console Appearance theme is dark, so every IAB sub-view the SDK renders
+   (purpose / feature / vendor detail, accordions, filter panels…) can bring its
+   own dark background — which, combined with our dark body text, shows up as an
+   unreadable black block. Chasing them class-by-class is whack-a-mole, so make
+   EVERY element inside the modal body transparent (the modal itself is white →
+   they render white), and exclude only the elements that are meant to be dark or
+   brand-coloured: the tab bar, the footer + its wrappers, the toggles, and the
+   action buttons. Any future sub-view is covered automatically.
+   NOTE: must stay on ONE line — a line break here would become a descendant
+   combinator (`* :not(…)`), which is a different (and wrong) selector. */
+html body .cmp-modal .cmp-modal__body *:not(.cmp-modal__footer):not(.cmp-modal__footer *):not(.cmp-horizontal-tabs__nav):not(.cmp-horizontal-tabs__nav *):not(.cmp-switch):not(.cmp-switch *):not(.cmp-save-btn):not(.cmp-decline-btn):not(.cmp-btn-wrapper):not(.cmp-logo-wrapper){ background-color:transparent !important; }
+
+/* revoke-consent floating button */
+html body .cmp-revoke-consent{ background-color:#0B7A4B !important; color:#ffffff !important; }
+html body .cmp-revoke-consent:hover{ background-color:#064E3B !important; }
+
+/* ---- GPC (Global Privacy Control) flyout -------------------------------- */
+html body .f-gpc-banner{ background-color:#ffffff !important; color:#03291E !important; border-top:4px solid #C9A227 !important; }
+html body .f-gpc-banner .f-banner-header span{ color:#064E3B !important; font-family:'Playfair Display',Georgia,serif !important; font-weight:700 !important; }
+html body .f-gpc-banner .f-banner-header svg path{ fill:#0B7A4B !important; }
+html body .f-gpc-banner .f-banner-body-text{ color:#334155 !important; }
+html body .f-gpc-banner .f-banner-link a,
+html body .f-gpc-banner .f-banner-link .f-cmp-cookie-pref-tab{ color:#0B7A4B !important; }
+html body .f-gpc-banner button{ background-color:#0B7A4B !important; color:#ffffff !important; border:1.5px solid #0B7A4B !important; border-radius:.375rem !important; font-weight:600 !important; }
+html body .f-gpc-banner .f-banner-close-btn,
+html body .f-gpc-banner .f-banner-close-btn svg path{ color:#064E3B !important; fill:#064E3B !important; }
+html body .f-gpc-flyout{ background-color:#0B7A4B !important; }
+html body .f-gpc-flyout .f-gpc-logo path{ fill:#ffffff !important; }
