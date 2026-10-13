@@ -151,3 +151,11 @@ html body .f-gpc-banner .f-banner-close-btn,
 html body .f-gpc-banner .f-banner-close-btn svg path{ color:#064E3B !important; fill:#064E3B !important; }
 html body .f-gpc-flyout{ background-color:#0B7A4B !important; }
 html body .f-gpc-flyout .f-gpc-logo path{ fill:#ffffff !important; }
+
+/* host-badge clearance (build_sites.py) */
+html body .cc-window.cc-banner,
+html body .f-gpc-banner{ padding-right:240px !important; }
+@media (max-width: 640px){
+  html body .cc-window.cc-banner,
+  html body .f-gpc-banner{ padding-right:16px !important; padding-bottom:72px !important; }
+}
