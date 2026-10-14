@@ -26,7 +26,7 @@
   var s = document.createElement('script');
   s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
   s.setAttribute('data-tenant-uuid', '6922dabb-aab2-4f98-b911-e35595c14ff3');
-  s.setAttribute('data-domain-uuid', 'a768642f-de5b-4f6e-9b2f-a357b3e7f8ae');
+  s.setAttribute('data-domain-uuid', '4073ef83-77e2-4f52-ac4e-2594a2482914');
   s.setAttribute('data-backend-url', 'https://app.securiti.ai');
   s.setAttribute('data-skip-css', 'false');
   s.defer = true;
@@ -101,7 +101,7 @@
 </main>
 <script>
 (function () {
-  var CATS = {"essential": 1, "analytics": 2, "advertising": 3, "performance": 4, "social": 5, "geo": 6, "biometrics": 7}, LABELS = [["essential", "Essential"], ["performance", "Performance & Functionality"], ["analytics", "Analytics & Customization"], ["advertising", "Advertising"], ["social", "Social Networking"], ["geo", "Precise Geolocation"], ["biometrics", "Biometrics"]];
+  var CATS = {"essential": 98, "analytics": 99, "advertising": 100, "performance": 101, "social": 102, "geo": 103, "biometrics": 104}, LABELS = [["essential", "Essential"], ["performance", "Performance & Functionality"], ["analytics", "Analytics & Customization"], ["advertising", "Advertising"], ["social", "Social Networking"], ["geo", "Precise Geolocation"], ["biometrics", "Biometrics"]];
   try { if (navigator.globalPrivacyControl === true) document.getElementById("pc-gpc").classList.remove("hidden"); } catch (e) {}
   function consents() {
     var m = document.cookie.match(/(?:^|;\s*)__privaci_cookie_consents=([^;]+)/);
