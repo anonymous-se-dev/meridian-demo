@@ -191,6 +191,7 @@
       '<div style="color:#64748b;margin-top:2px">' + (s.marketing ? "Recommendations tailored to you are on." : "Turn on Advertising cookies to see tailored recommendations.") + '</div></div>' +
 
       '<button class="cd-managecookies" style="width:100%;border:none;border-radius:10px;padding:11px;font:700 14px Inter;color:#fff;cursor:pointer;background:' + ACCENT + ';margin-bottom:8px">Manage cookie preferences</button>' +
+      '<a href="https://privacy-central.securiti.ai/#/form-access-preference/6be13b8f-fdb6-4dc0-a0e0-5b917a0ad5ac/585aeaf1-7685-4aa9-8a22-ff240b7094b2" target="_blank" rel="noopener" style="display:block;text-align:center;text-decoration:none;border:1.5px solid ' + ACCENT + ';border-radius:10px;padding:10px;font:700 14px Inter;color:' + ACCENT + ';background:#fff;margin-bottom:8px">Manage communication preferences ↗</a>' +
       '<button class="cd-dsr" style="width:100%;border:1.5px solid ' + ACCENT + ';border-radius:10px;padding:10px;font:700 14px Inter;color:' + ACCENT + ';background:#fff;cursor:pointer;margin-bottom:8px">Privacy Center — submit a request</button>' +
       '<button class="cd-signout" style="width:100%;border:none;background:none;color:#64748b;padding:10px;cursor:pointer;font:inherit">Sign out</button>' +
       '</div>');
