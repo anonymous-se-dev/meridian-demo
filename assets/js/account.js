@@ -28,7 +28,7 @@
   }
   var MKT = ids("data-mkt");                 // Advertising, Social
   var ANA = ids("data-ana");                 // Analytics, Performance
-  var ESS = SITE === "nm" ? "12" : SITE === "mfg" ? "4" : "";
+  var ESS = "98";   // this domain's Essential category ID
   var BKEY = SITE + "_ad_personalization";   // personalize.js behaviour cookie
   var LSKEY = SITE + "_demo_user";           // session marker (localStorage)
 
@@ -40,6 +40,7 @@
         interests: ["Fashion", "Grocery"], consent: { analytics: true, marketing: false } }
     ],
     mfg: [
+      { email: "alex@novamart.demo", pass: "demo", name: "Alex Rivera", plan: "Everyday Banking client", interests: ["Banking", "Wealth"], consent: { analytics: true, marketing: true } },
       { email: "jordan@meridian.demo", pass: "demo", name: "Jordan Blake", plan: "Private Wealth client",
         interests: ["Wealth", "Business"], consent: { analytics: true, marketing: true } },
       { email: "taylor@meridian.demo", pass: "demo", name: "Taylor Reed", plan: "Everyday Banking client",
