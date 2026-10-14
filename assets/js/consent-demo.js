@@ -337,7 +337,20 @@
        __tcfapi('getVendorList', 2, console.log)   → should return ~1,200 vendors
      and check the console for "<lang> language is unsupported by IAB TCF." */
 
+  // Bridge Securiti consent -> Google Consent Mode v2 (same as NovaMart's demo layer).
+  var lastGcm = "";
+  function syncConsentMode() {
+    if (typeof window.gtag !== "function") return;
+    var a = state.analytics ? "granted" : "denied";
+    var m = state.marketing ? "granted" : "denied";
+    var sig = a + "|" + m;
+    if (sig === lastGcm) return;
+    lastGcm = sig;
+    window.gtag("consent", "update", { analytics_storage: a, ad_storage: m, ad_user_data: m, ad_personalization: m });
+  }
+
   function apply() {
+    syncConsentMode();
     ensureHost();
     if (state.analytics) loadGTM();
     if (state.marketing) loadMailchimp();
