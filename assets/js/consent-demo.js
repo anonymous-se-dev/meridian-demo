@@ -266,7 +266,7 @@
      ------------------------------------------------------------------------ */
   function ckPrefix() {
     var b = (document.documentElement.getAttribute("data-brand") || "site").toLowerCase();
-    return b.indexOf("nova") >= 0 ? "nm" : b.indexOf("merid") >= 0 ? "mfg" : "site";
+    return b.indexOf("nova") >= 0 ? "nm" : (b.indexOf("merid") >= 0 || b.indexOf("halvora") >= 0) ? "mfg" : "site";
   }
   function rid(n) { var s = "", c = "abcdefghijklmnopqrstuvwxyz0123456789"; for (var i = 0; i < n; i++) s += c[Math.floor(Math.random() * c.length)]; return s; }
   function rnum(n) { var s = ""; for (var i = 0; i < n; i++) s += Math.floor(Math.random() * 10); return s; }

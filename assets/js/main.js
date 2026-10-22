@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Meridian Financial Group — front-end behaviour
+   Halvora Health & Financial — front-end behaviour
    --------------------------------------------------------------------------
    Cookie consent is owned by the SECURITI Cookie Consent SDK (loaded in
    <head>). Securiti renders the banner + preference center and drives Google

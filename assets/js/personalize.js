@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Meridian — consent-gated behavioural + favourites personalization
+   Halvora — consent-gated behavioural + favourites personalization
    --------------------------------------------------------------------------
    The "Recommended for you" rail is a MARKETING feature:
      • It only appears when the visitor has granted MARKETING (Advertising)
@@ -202,7 +202,7 @@
 
     if (b.items.length === 0 && favs.length === 0) {
       var popular = window.MFG_CATALOG.filter(function (p) { return p.tag === "popular"; }).slice(0, 3);
-      host.innerHTML = head("✦ Recommended for you", "Popular with our clients") + grid(popular) +
+      host.innerHTML = head("✦ Recommended for you", "Popular with our members") + grid(popular) +
         '<p class="text-sm text-slate-500 mt-6 text-center">Explore a few services or tap ♡ to <strong>save</strong> the ones you like — this rail then tailors itself to your interests.</p>';
       window.MFG_SYNC_HEARTS();
       return;
@@ -282,7 +282,7 @@
     if (!host) return;
     var id = new URLSearchParams(location.search).get("id");
     var p = window.MFG_FIND(id) || window.MFG_CATALOG[0];
-    document.title = p.name + " — Meridian Financial Group";
+    document.title = p.name + " — Halvora Health & Financial";
     recordView(p.id);
 
     host.innerHTML =
@@ -297,10 +297,10 @@
             return '<li class="flex gap-3 items-start text-[15px]"><span class="w-6 h-6 rounded-full bg-money text-gold grid place-items-center shrink-0 text-[13px]">✓</span>' + f + '</li>'; }).join("") + '</ul>' +
           '<div class="flex flex-wrap gap-3.5 mt-8">' +
             '<button class="inline-flex items-center gap-2 font-semibold px-6 py-3.5 rounded-md bg-money text-white hover:bg-money-dark transition">' + p.cta + ' →</button>' +
-            '<button class="inline-flex items-center gap-2 font-semibold px-6 py-3.5 rounded-md border-[1.5px] border-money text-money hover:bg-money hover:text-white transition">Talk to an advisor</button>' +
+            '<button class="inline-flex items-center gap-2 font-semibold px-6 py-3.5 rounded-md border-[1.5px] border-money text-money hover:bg-money hover:text-white transition">Talk to a coach</button>' +
             heartHtml(p.id, "button") +
           '</div>' +
-          '<p class="text-slate-400 text-[11px] mt-5 max-w-lg leading-relaxed">Rates and terms shown are illustrative for demonstration purposes only. Member FDIC. Equal Housing Lender.</p>' +
+          '<p class="text-slate-400 text-[11px] mt-5 max-w-lg leading-relaxed">Details shown are illustrative for demonstration purposes only. Halvora is a fictitious brand; HSA eligibility and tax treatment follow IRS rules.</p>' +
         '</div>' +
         '<aside class="rounded-2xl shadow-hi overflow-hidden text-white sticky top-24" style="background:linear-gradient(160deg,#03291E,#064E3B 60%,#0B7A4B)">' +
           '<div class="p-8">' +
